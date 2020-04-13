@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:AADataLayer/AADataLayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AAViewModels/AAViewModels.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AASharedUI/AASharedUI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AlpineAir_iOS/AlpineAir_iOS.xcodeproj">
+   </FileRef>
+</Workspace>
