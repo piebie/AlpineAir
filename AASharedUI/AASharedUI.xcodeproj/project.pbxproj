@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		828E7A7724463AC800CF0E0A /* AABackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7624463AC800CF0E0A /* AABackgroundView.swift */; };
 		828E7A7924463AE800CF0E0A /* AALoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7824463AE800CF0E0A /* AALoginView.swift */; };
+		828E7A7C2446541400CF0E0A /* SpotlightButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7B2446541400CF0E0A /* SpotlightButtonStyle.swift */; };
 		82E9F0B42444D7AB0035EF8C /* AASharedUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E9F0B22444D7AB0035EF8C /* AASharedUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82E9F0EA2445314C0035EF8C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E9F0E92445314C0035EF8C /* Colors.xcassets */; };
 		82E9F0ED244531900035EF8C /* FlatUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0EC244531900035EF8C /* FlatUIColors.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		828E7A7624463AC800CF0E0A /* AABackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AABackgroundView.swift; sourceTree = "<group>"; };
 		828E7A7824463AE800CF0E0A /* AALoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AALoginView.swift; sourceTree = "<group>"; };
+		828E7A7B2446541400CF0E0A /* SpotlightButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightButtonStyle.swift; sourceTree = "<group>"; };
 		82E9F0AF2444D7AB0035EF8C /* AASharedUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AASharedUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E9F0B22444D7AB0035EF8C /* AASharedUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AASharedUI.h; sourceTree = "<group>"; };
 		82E9F0B32444D7AB0035EF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		828E7A7A2446539F00CF0E0A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				828E7A7B2446541400CF0E0A /* SpotlightButtonStyle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		82E9F0A52444D7AB0035EF8C = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		82E9F0B12444D7AB0035EF8C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				828E7A7A2446539F00CF0E0A /* Buttons */,
 				82E9F0EB244531690035EF8C /* Colors */,
 				82E9F0FB244600600035EF8C /* Gradients */,
 				82E9F0F62445FEA50035EF8C /* RidgeLine */,
@@ -193,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828E7A7C2446541400CF0E0A /* SpotlightButtonStyle.swift in Sources */,
 				828E7A7724463AC800CF0E0A /* AABackgroundView.swift in Sources */,
 				82E9F0FD2446008F0035EF8C /* EliteStatusGradients.swift in Sources */,
 				82E9F0FA2445FEF40035EF8C /* RidgeLineBackgroundSurface.swift in Sources */,

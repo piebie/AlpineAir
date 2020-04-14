@@ -9,6 +9,13 @@
 import Foundation
 import SwiftUI
 
+// TODO: WEEK 3
+// 1. Make "Sign In" button use the SpotlightButtonStyle
+// 2. Remove the background wrapper
+// 3. Animate the TextFields and "Sign In" button
+//      * They should slide in from the right
+//        one after another with a slight delay
+
 public struct AALoginView: View {
     @State var username: String = ""
     @State var password: String = ""

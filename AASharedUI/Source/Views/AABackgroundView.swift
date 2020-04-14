@@ -9,6 +9,14 @@
 import Foundation
 import SwiftUI
 
+// TODO: WEEK 3
+// 1. Add an easeInOut animation to the ZStack
+// 2. Give the RidgeLineBackgroundSurface a transition which includes opacity
+//      and moving up from the bottom
+// 3. When views transition in and out of ZStacks, the stack changes their
+//      zIndex, which will disrupt our animation. Assign a static zIndex
+//      for each element in the ZStack
+
 public struct AABackgroundView: View {
     public var showSurface: Bool
     public let backgroundGradient: Gradient
