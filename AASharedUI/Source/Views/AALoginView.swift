@@ -17,35 +17,74 @@ import SwiftUI
 //        one after another with a slight delay
 
 public struct AALoginView: View {
+    private let itemTransition = AnyTransition.asymmetric(insertion: AnyTransition.offset(x: 100, y: 0).combined(with: .move(edge: .trailing)),
+                                                          removal: AnyTransition.opacity.combined(with: .move(edge: .trailing)))
+
     @State var username: String = ""
     @State var password: String = ""
 
-    let loginAction: (String, String) -> ()
+    @State var hasLoaded = false
 
-    public init(loginAction: @escaping (String, String) -> ()) {
+    let loginAction: (String, String) -> ()
+    public let isHidden: Binding<Bool>
+
+    public init(loginAction: @escaping (String, String) -> (),
+                isHidden: Binding<Bool>) {
         self.loginAction = loginAction
+        self.isHidden = isHidden
     }
 
     public var body: some View {
-        ZStack(alignment: .top) {
-            InterfaceColors.primaryBackground
-                .opacity(0.8)
+        VStack(spacing: 10) {
+            if hasLoaded && !isHidden.wrappedValue {
+                Spacer()
 
-            VStack {
+                Text("Alpine Air")
+                    .font(.system(size: 60, weight: .thin))
+                    .foregroundColor(FlatUIColors.clouds)
+                    .padding(.bottom, 10)
+                    .frame(maxWidth: 300)
+                    .transition(itemTransition)
+                    .animation(.ripple(index: 0))
+
+                Text("From chairlifts to airplanes, you can trust us with your travel")
+                    .font(.system(size: 20, weight: .light))
+                    .foregroundColor(FlatUIColors.clouds)
+                    .multilineTextAlignment(.center)
+                    .transition(itemTransition)
+                    .animation(.ripple(index: 1))
+
+                Spacer()
+
                 TextField("Username", text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .transition(itemTransition)
+                    .animation(.ripple(index: 2))
 
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .transition(itemTransition)
+                    .animation(.ripple(index: 3))
+
+                Spacer()
 
                 Button(action: { self.loginAction(self.username, self.password) }) {
                     Text("Sign in")
+                        .frame(maxWidth: .infinity)
                 }
-            }.padding()
+                .buttonStyle(SpotlightButtonStyle(background: InterfaceColors.navy,
+                                                  foregroundColor: FlatUIColors.clouds,
+                                                  font: .system(size: 20, weight: .regular)))
+                .transition(itemTransition)
+                .animation(.ripple(index: 4))
             }
-        .cornerRadius(8)
-        .fixedSize(horizontal: false,
-                    vertical: true)
+
+            Spacer()
+        }.onAppear() {
+            withAnimation {
+                self.hasLoaded = true
+            }
+        }
     }
 }
 
@@ -58,13 +97,23 @@ public struct AALoginView_Previews: PreviewProvider {
     }
 
     struct PreviewWrapper: View {
-        var body: some View {
-            ZStack {
-                AABackgroundView(showSurface: false, backgroundGradient: EliteStatusGradients.basic)
+        @State var isHidden: Bool = true
 
-                AALoginView(loginAction: { _, _ in })
-                    .frame(width: 300)
+        var body: some View {
+            ZStack(alignment: .top) {
+                AABackgroundView(showSurface: false, backgroundGradient: EliteStatusGradients.basic)
+                    .zIndex(0)
+
+                AALoginView(loginAction: { _, _ in },
+                            isHidden: self.$isHidden)
+                    .frame(maxWidth: 300)
                     .shadow(radius: 10)
+                    .zIndex(1)
+
+                Toggle(isOn: self.$isHidden.animation()) {
+                    Text("boop")
+                }
+            .zIndex(2)
             }
         }
     }
