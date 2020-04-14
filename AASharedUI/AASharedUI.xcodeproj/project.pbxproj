@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		828E7A7724463AC800CF0E0A /* AABackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7624463AC800CF0E0A /* AABackgroundView.swift */; };
+		828E7A7924463AE800CF0E0A /* AALoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7824463AE800CF0E0A /* AALoginView.swift */; };
 		82E9F0B42444D7AB0035EF8C /* AASharedUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 82E9F0B22444D7AB0035EF8C /* AASharedUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82E9F0EA2445314C0035EF8C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E9F0E92445314C0035EF8C /* Colors.xcassets */; };
 		82E9F0ED244531900035EF8C /* FlatUIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0EC244531900035EF8C /* FlatUIColors.swift */; };
 		82E9F0F124453CB00035EF8C /* AAColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E9F0F024453CB00035EF8C /* AAColors.xcassets */; };
 		82E9F0F324453EEE0035EF8C /* InterfaceColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0F224453EEE0035EF8C /* InterfaceColors.swift */; };
-		82E9F0F52445DE5E0035EF8C /* AABackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0F42445DE5E0035EF8C /* AABackgroundView.swift */; };
 		82E9F0F82445FEB90035EF8C /* RidgeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0F72445FEB90035EF8C /* RidgeLine.swift */; };
 		82E9F0FA2445FEF40035EF8C /* RidgeLineBackgroundSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0F92445FEF40035EF8C /* RidgeLineBackgroundSurface.swift */; };
 		82E9F0FD2446008F0035EF8C /* EliteStatusGradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0FC2446008F0035EF8C /* EliteStatusGradients.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		828E7A7624463AC800CF0E0A /* AABackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AABackgroundView.swift; sourceTree = "<group>"; };
+		828E7A7824463AE800CF0E0A /* AALoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AALoginView.swift; sourceTree = "<group>"; };
 		82E9F0AF2444D7AB0035EF8C /* AASharedUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AASharedUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E9F0B22444D7AB0035EF8C /* AASharedUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AASharedUI.h; sourceTree = "<group>"; };
 		82E9F0B32444D7AB0035EF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,7 +29,6 @@
 		82E9F0EC244531900035EF8C /* FlatUIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatUIColors.swift; sourceTree = "<group>"; };
 		82E9F0F024453CB00035EF8C /* AAColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AAColors.xcassets; sourceTree = "<group>"; };
 		82E9F0F224453EEE0035EF8C /* InterfaceColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceColors.swift; sourceTree = "<group>"; };
-		82E9F0F42445DE5E0035EF8C /* AABackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AABackgroundView.swift; path = Views/AABackgroundView.swift; sourceTree = "<group>"; };
 		82E9F0F72445FEB90035EF8C /* RidgeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidgeLine.swift; sourceTree = "<group>"; };
 		82E9F0F92445FEF40035EF8C /* RidgeLineBackgroundSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidgeLineBackgroundSurface.swift; sourceTree = "<group>"; };
 		82E9F0FC2446008F0035EF8C /* EliteStatusGradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliteStatusGradients.swift; sourceTree = "<group>"; };
@@ -43,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		828E7A7524463AC800CF0E0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				828E7A7624463AC800CF0E0A /* AABackgroundView.swift */,
+				828E7A7824463AE800CF0E0A /* AALoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		82E9F0A52444D7AB0035EF8C = {
 			isa = PBXGroup;
 			children = (
@@ -65,9 +76,9 @@
 				82E9F0EB244531690035EF8C /* Colors */,
 				82E9F0FB244600600035EF8C /* Gradients */,
 				82E9F0F62445FEA50035EF8C /* RidgeLine */,
+				828E7A7524463AC800CF0E0A /* Views */,
 				82E9F0B22444D7AB0035EF8C /* AASharedUI.h */,
 				82E9F0B32444D7AB0035EF8C /* Info.plist */,
-				82E9F0F42445DE5E0035EF8C /* AABackgroundView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -182,11 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828E7A7724463AC800CF0E0A /* AABackgroundView.swift in Sources */,
 				82E9F0FD2446008F0035EF8C /* EliteStatusGradients.swift in Sources */,
 				82E9F0FA2445FEF40035EF8C /* RidgeLineBackgroundSurface.swift in Sources */,
 				82E9F0F82445FEB90035EF8C /* RidgeLine.swift in Sources */,
 				82E9F0ED244531900035EF8C /* FlatUIColors.swift in Sources */,
-				82E9F0F52445DE5E0035EF8C /* AABackgroundView.swift in Sources */,
+				828E7A7924463AE800CF0E0A /* AALoginView.swift in Sources */,
 				82E9F0F324453EEE0035EF8C /* InterfaceColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,8 +14,17 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var appStateModel: AppStateModel
 
+    @State var isLoggedIn = false
+
     var body: some View {
-        AABackgroundView(showSurface: false, backgroundGradient: EliteStatusGradients.basic)
+        // TODO: Week 2 tasks
+        // 1. Create a landing page view which has:
+        //     * A title label for "Alpine Air"
+        //     * A wrapping, subtitle label saying "From chairlifts to airplanes, you can trust us with your travel"
+        //     * An AALoginView (see the file in AASharedUI/Source/Views) - its action should toggle the isLoggedIn binding
+        //     * Automatic spacing between the top of the page and the title + subtitle group, and the bottom of the page and the bottom of the login block
+        // 2. A "Sign Out" button that shows only when the surface is shown - its action should toggle the isLoggedIn binding
+        AABackgroundView(showSurface: isLoggedIn, backgroundGradient: EliteStatusGradients.basic)
     }
 }
 
