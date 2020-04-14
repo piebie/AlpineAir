@@ -20,12 +20,15 @@ public struct AABackgroundView: View {
     }
 
     public var body: some View {
-        // TODO: ADD YOUR CODE HERE
-        // 1. Create a LinearGradient using background gradient from .topLeading to .bottomTrailing
-        // 2. Put RidgeLineBackgroundSurface on top of it - make sure to set its color to something from InterfaceColors
-        // 3. Add a shadow to RidgeLineBackgroundSurface with a radius of 5 to help it pop from the background
-        // 4. Only show RidgeLineBackgroundSurface when showSurface is enabled
-        Color.pink
+        ZStack {
+            LinearGradient(gradient: backgroundGradient, startPoint: .topLeading, endPoint: .bottomTrailing)
+
+            if showSurface {
+                RidgeLineBackgroundSurface(surfaceColor: InterfaceColors.primaryBackground)
+                    .padding(.top, 150)
+                    .shadow(radius: 10)
+            }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
