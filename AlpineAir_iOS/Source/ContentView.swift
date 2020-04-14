@@ -17,14 +17,37 @@ struct ContentView: View {
     @State var isLoggedIn = false
 
     var body: some View {
-        // TODO: Week 2 tasks
-        // 1. Create a landing page view which has:
-        //     * A title label for "Alpine Air"
-        //     * A wrapping, subtitle label saying "From chairlifts to airplanes, you can trust us with your travel"
-        //     * An AALoginView (see the file in AASharedUI/Source/Views) - its action should toggle the isLoggedIn binding
-        //     * Automatic spacing between the top of the page and the title + subtitle group, and the bottom of the page and the bottom of the login block
-        // 2. A "Sign Out" button that shows only when the surface is shown - its action should toggle the isLoggedIn binding
-        AABackgroundView(showSurface: isLoggedIn, backgroundGradient: EliteStatusGradients.basic)
+        ZStack {
+            AABackgroundView(showSurface: isLoggedIn, backgroundGradient: EliteStatusGradients.basic)
+
+            if !isLoggedIn {
+                VStack {
+                    Spacer()
+
+                    Text("Alpine Air")
+                        .font(.system(size: 60, weight: .thin))
+                        .foregroundColor(InterfaceColors.primaryBackground)
+                        .padding(.bottom, 10)
+                    Text("From chairlifts to airplanes, you can trust us with your travel")
+                        .font(.system(size: 20, weight: .light))
+                        .foregroundColor(InterfaceColors.primaryBackground)
+                        .multilineTextAlignment(.center)
+
+                    Spacer()
+
+                    AALoginView(loginAction: { _, _ in self.isLoggedIn.toggle() })
+                        .shadow(radius: 10)
+
+                    Spacer()
+                    Spacer()
+
+                }.frame(maxWidth: 300)
+            } else {
+                Button(action: { self.isLoggedIn.toggle() }) {
+                    Text("Sign out")
+                }
+            }
+        }
     }
 }
 

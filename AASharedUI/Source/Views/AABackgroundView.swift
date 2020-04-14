@@ -32,8 +32,8 @@ public struct AABackgroundView: View {
     }
 }
 
-struct AABackgroundView_Previews: PreviewProvider {
-    static var previews: some View {
+public struct AABackgroundView_Previews: PreviewProvider {
+    public static var previews: some View {
         Group {
             PreviewWrapper(backgroundGradient: EliteStatusGradients.basic).colorScheme(.light)
             PreviewWrapper(backgroundGradient: EliteStatusGradients.basic).colorScheme(.dark)
