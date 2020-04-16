@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82073A162448D1E200A24EF6 /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82073A152448D1E200A24EF6 /* SignInTextField.swift */; };
 		828E7A7724463AC800CF0E0A /* AABackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7624463AC800CF0E0A /* AABackgroundView.swift */; };
 		828E7A7924463AE800CF0E0A /* AALoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7824463AE800CF0E0A /* AALoginView.swift */; };
 		828E7A7C2446541400CF0E0A /* SpotlightButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E7A7B2446541400CF0E0A /* SpotlightButtonStyle.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82073A152448D1E200A24EF6 /* SignInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
 		828E7A7624463AC800CF0E0A /* AABackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AABackgroundView.swift; sourceTree = "<group>"; };
 		828E7A7824463AE800CF0E0A /* AALoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AALoginView.swift; sourceTree = "<group>"; };
 		828E7A7B2446541400CF0E0A /* SpotlightButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightButtonStyle.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82073A142448D1C800A24EF6 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				82073A152448D1E200A24EF6 /* SignInTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		828E7A7524463AC800CF0E0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 				82E9F0EB244531690035EF8C /* Colors */,
 				82E9F0FB244600600035EF8C /* Gradients */,
 				82E9F0F62445FEA50035EF8C /* RidgeLine */,
+				82073A142448D1C800A24EF6 /* TextFields */,
 				828E7A7524463AC800CF0E0A /* Views */,
 				82E9F0B22444D7AB0035EF8C /* AASharedUI.h */,
 				82E9F0B32444D7AB0035EF8C /* Info.plist */,
@@ -218,6 +229,7 @@
 				828E7A7F24465A3000CF0E0A /* CustomAnimations.swift in Sources */,
 				828E7A7C2446541400CF0E0A /* SpotlightButtonStyle.swift in Sources */,
 				828E7A7724463AC800CF0E0A /* AABackgroundView.swift in Sources */,
+				82073A162448D1E200A24EF6 /* SignInTextField.swift in Sources */,
 				82E9F0FD2446008F0035EF8C /* EliteStatusGradients.swift in Sources */,
 				82E9F0FA2445FEF40035EF8C /* RidgeLineBackgroundSurface.swift in Sources */,
 				82E9F0F82445FEB90035EF8C /* RidgeLine.swift in Sources */,

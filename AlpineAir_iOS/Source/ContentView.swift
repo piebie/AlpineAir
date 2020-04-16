@@ -26,7 +26,6 @@ struct ContentView: View {
                 }
             },
                         isHidden: self.$isLoggedIn)
-                .colorScheme(.light)
                 .frame(maxWidth: 300)
 
             if isLoggedIn {

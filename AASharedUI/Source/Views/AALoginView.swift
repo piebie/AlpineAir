@@ -9,6 +9,9 @@
 import Foundation
 import SwiftUI
 
+// TODO: WEEK 4
+// Fix the styling on the TextFields!
+// Implement TextFields/SignInTextField and hook it up to the TextFields below
 public struct AALoginView: View {
     private let itemTransition = AnyTransition.asymmetric(insertion: AnyTransition.offset(x: 100, y: 0).combined(with: .move(edge: .trailing)),
                                                           removal: AnyTransition.opacity.combined(with: .move(edge: .trailing)))
