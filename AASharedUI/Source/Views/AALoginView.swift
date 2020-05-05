@@ -9,11 +9,56 @@
 import Foundation
 import SwiftUI
 
-// TODO: WEEK 2
-// 1. Implement a View called AALoginView and its preview provider.
-//    This view should:
-//      * Have a text field for username
-//      * Have a text field for password
-//      * Have a sign in button
-//      * Have a semi-transparent background of InterfaceColors.primaryBackground
-//      * Take as a contructor arg a (String, String) -> () block to handle sign in
+public struct AALoginView: View {
+    @State var username: String = ""
+    @State var password: String = ""
+
+    let loginAction: (String, String) -> ()
+
+    public init(loginAction: @escaping (String, String) -> ()) {
+        self.loginAction = loginAction
+    }
+
+    public var body: some View {
+        ZStack(alignment: .top) {
+            InterfaceColors.primaryBackground
+                .opacity(0.8)
+
+            VStack {
+                TextField("Username", text: $username)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                Button(action: { self.loginAction(self.username, self.password) }) {
+                    Text("Sign in")
+                }
+            }.padding()
+            }
+        .cornerRadius(8)
+        .fixedSize(horizontal: false,
+                    vertical: true)
+    }
+}
+
+public struct AALoginView_Previews: PreviewProvider {
+    public static var previews: some View {
+        Group {
+            PreviewWrapper().colorScheme(.light)
+            PreviewWrapper().colorScheme(.dark)
+        }
+    }
+
+    struct PreviewWrapper: View {
+        var body: some View {
+            ZStack {
+                AABackgroundView(showSurface: false, backgroundGradient: EliteStatusGradients.basic)
+
+                AALoginView(loginAction: { _, _ in })
+                    .frame(width: 300)
+                    .shadow(radius: 10)
+            }
+        }
+    }
+}
