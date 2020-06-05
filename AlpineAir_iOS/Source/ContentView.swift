@@ -17,35 +17,24 @@ struct ContentView: View {
     @State var isLoggedIn = false
 
     var body: some View {
-        ZStack {
-            AABackgroundView(showSurface: isLoggedIn, backgroundGradient: EliteStatusGradients.basic)
+        ZStack(alignment: .top) {
+            AABackgroundView(showSurface: isLoggedIn, backgroundGradient: EliteStatusGradients.basic).zIndex(0)
 
-            if !isLoggedIn {
-                VStack {
-                    Spacer()
-
-                    Text("Alpine Air")
-                        .font(.system(size: 60, weight: .thin))
-                        .foregroundColor(InterfaceColors.primaryBackground)
-                        .padding(.bottom, 10)
-                    Text("From chairlifts to airplanes, you can trust us with your travel")
-                        .font(.system(size: 20, weight: .light))
-                        .foregroundColor(InterfaceColors.primaryBackground)
-                        .multilineTextAlignment(.center)
-
-                    Spacer()
-
-                    AALoginView(loginAction: { _, _ in self.isLoggedIn.toggle() })
-                        .shadow(radius: 10)
-
-                    Spacer()
-                    Spacer()
-
-                }.frame(maxWidth: 300)
-            } else {
-                Button(action: { self.isLoggedIn.toggle() }) {
-                    Text("Sign out")
+            AALoginView(loginAction: { _,_ in
+                withAnimation {
+                    self.isLoggedIn.toggle()
                 }
+            },
+                        isHidden: self.$isLoggedIn)
+                .colorScheme(.light)
+                .frame(maxWidth: 300)
+
+            if isLoggedIn {
+                HStack(alignment: .center) {
+                    Button(action: { self.isLoggedIn.toggle() }) {
+                        Text("Sign out")
+                    }
+                }.frame(maxHeight: .infinity)
             }
         }
     }
