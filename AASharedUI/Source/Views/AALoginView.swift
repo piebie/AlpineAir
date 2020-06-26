@@ -9,9 +9,6 @@
 import Foundation
 import SwiftUI
 
-// TODO: WEEK 4
-// Fix the styling on the TextFields!
-// Implement TextFields/SignInTextField and hook it up to the TextFields below
 public struct AALoginView: View {
     private let itemTransition = AnyTransition.asymmetric(insertion: AnyTransition.offset(x: 100, y: 0).combined(with: .move(edge: .trailing)),
                                                           removal: AnyTransition.opacity.combined(with: .move(edge: .trailing)))
@@ -52,17 +49,20 @@ public struct AALoginView: View {
 
                 Spacer()
 
-                TextField("Username", text: $username)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("", text: $username)
+                    .textFieldStyle(SignInTextField(image: Image(systemName: "person"),
+                                                    placeholderText: "Username",
+                                                    showPlaceholder: username.isEmpty))
                     .transition(itemTransition)
                     .animation(.ripple(index: 2))
 
-                SecureField("Password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                SecureField("", text: $password)
+                    .textFieldStyle(SignInTextField(image: Image(systemName: "lock"),
+                                                    placeholderText: "Password",
+                                                    showPlaceholder: password.isEmpty))
                     .transition(itemTransition)
                     .animation(.ripple(index: 3))
-
-                Spacer()
+                    .padding(.bottom, 40)
 
                 Button(action: { self.loginAction(self.username, self.password) }) {
                     Text("Sign in")
@@ -75,6 +75,7 @@ public struct AALoginView: View {
                 .animation(.ripple(index: 4))
             }
 
+            Spacer()
             Spacer()
         }.onAppear() {
             withAnimation {
@@ -93,7 +94,7 @@ public struct AALoginView_Previews: PreviewProvider {
     }
 
     struct PreviewWrapper: View {
-        @State var isHidden: Bool = true
+        @State var isHidden: Bool = false
 
         var body: some View {
             ZStack(alignment: .top) {
