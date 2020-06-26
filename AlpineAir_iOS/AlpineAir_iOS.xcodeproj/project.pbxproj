@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82073A192448FEDD00A24EF6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82073A182448FEDD00A24EF6 /* HomeView.swift */; };
 		82E9F0762444D7780035EF8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0752444D7780035EF8C /* AppDelegate.swift */; };
 		82E9F0782444D7780035EF8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0772444D7780035EF8C /* SceneDelegate.swift */; };
 		82E9F07A2444D7780035EF8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E9F0792444D7780035EF8C /* ContentView.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		82073A182448FEDD00A24EF6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		82E9F0722444D7780035EF8C /* Alpine Air.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpine Air.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E9F0752444D7780035EF8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82E9F0772444D7780035EF8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82073A172448FD7C00A24EF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82E9F0792444D7780035EF8C /* ContentView.swift */,
+				82073A182448FEDD00A24EF6 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		82E9F0692444D7780035EF8C = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +139,9 @@
 		82E9F0742444D7780035EF8C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				82073A172448FD7C00A24EF6 /* Views */,
 				82E9F0752444D7780035EF8C /* AppDelegate.swift */,
 				82E9F0772444D7780035EF8C /* SceneDelegate.swift */,
-				82E9F0792444D7780035EF8C /* ContentView.swift */,
 				82E9F07B2444D7780035EF8C /* Assets.xcassets */,
 				82E9F0802444D7780035EF8C /* LaunchScreen.storyboard */,
 				82E9F0832444D7780035EF8C /* Info.plist */,
@@ -308,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E9F0762444D7780035EF8C /* AppDelegate.swift in Sources */,
+				82073A192448FEDD00A24EF6 /* HomeView.swift in Sources */,
 				82E9F0782444D7780035EF8C /* SceneDelegate.swift in Sources */,
 				82E9F07A2444D7780035EF8C /* ContentView.swift in Sources */,
 			);
